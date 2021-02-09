@@ -1,38 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Conosci MEP!{% endblock %}
+{% block title %}Conosci Andreas!{% endblock %}
 
 {% block stylesheets %}
     {{ encore_entry_link_tags('main') }}
 {% endblock %}
 
 {% block body %}
-    <h1>Conosci MEP</h1>
 
-    <p>
-        Ciao, questa piccola applicazione <strong>Symfony</strong> è stata pensata per farti
-        conoscere un po' meglio MEP e gli strumenti con cui lavoriamo.
+
+    <div id="navbar">
+        <ul id="urls">
+            <li><a href={{Menu0.1}} > {{Menu0.0}} </a></li>
+            <li><a href={{Menu1.1}} > {{Menu1.0}} </a></li>
+            <li><a href={{Menu2.1}} > {{Menu2.0}} </a></li>
+            <li><a href={{Menu3.1}} > {{Menu3.0}} </a></li>
+            <li id="profile" style="float:right"><a href="#"> {{profile ? profile : 'Non Autenticato'}} </a></li>
+        </ul>
+    </div>
+
+    <h1>CIAO MEP!</h1>
+
+    <p class="description">
+        Ho iniziato da poco ad utilizzare <strong>Symfony</strong> però mi piace come framework e voglio imparare ad usarlo benissimo.
+        Non sono il migliore, però avendo studiato Informatica sia all'<strong> ITIS di Fermo </strong> che
+        all' <strong>Università di Camerino</strong> sono abituato con il continuo cambio di framework e linguaggi 
+        e l'adattarmi è uno dei miei punti forti.
     </p>
 
-    <h2>Che cosa hai a disposizione</h2>
-    <p>
-        Ti vengono forniti alcuni dati fake, copiati da <a href="https://jsonplaceholder.typicode.com/"
-        target="_blank">jsonplaceholder.typicode.com</a>, puoi usarli a tuo piacimento:
-    </p>
+    <div class="js-user-rating" data-is-authenticated="{{ profile ? 'I solemny swear that I am up to no good' : 'Nox' }}"></div>
 
-    <ul>
-        <li>
-            Questo template Twig riceve una variabile <code>users</code> contenente dati fake su
-            alcuni utenti:
-            {{ dump(users) }}
-        </li>
-        <li>
-            Altri dati fake su dei "post" possono essere ottenuti tramite una chiamata asincrona a
-            <a href="{{ path('posts') }}" target="_blank">questo indirizzo</a>
-        </li>
-    </ul>
+    <div class="bottone"> 
+        <button id="ciao"> PRESS ME </button>
+    </div>
+
+    {% if profile != "" %}
+    <div class="usersofsite">
+
+        <h2>Ecco i {{users|length}} utenti registrati per le sedute spiritiche! </h2>
+
+        <ul id="users" >
+            {% for user in users %}
+                <li class="user">
+                    {{user.name}} </br>
+                    {{user.email}} </br>
+                </li> </br>
+            {% endfor %}
+        </ul>
+
+    </div>
+    {% endif %}
+
+
 {% endblock %}
-
 {% block javascripts %}
     {{ encore_entry_script_tags('main') }}
 {% endblock %}

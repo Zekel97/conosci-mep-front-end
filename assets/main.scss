@@ -1,3 +1,106 @@
-body {
-    background-color: lightgray;
+#urls{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
+
+#urls li {
+    float: left;
+}
+
+#urls li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#urls li a:hover {
+    background-color:purple;
+}
+
+ body, html {
+    height: 100%;
+    
+    /* The image used */
+    background-image: url("bg.jpg");
+    
+    /* Full height */
+    height: 100%;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: grey;
+}
+
+h1,p {
+    padding: 400px;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;    
+}
+
+h1 {
+    text-shadow: 4px 0 0 #262730, -4px 0 0 #262730, 0 4px 0 #262730, 0 -4px 0 #262730, 2px 2px #262730, -2px -2px 0 #262730, 2px -2px 0 #262730, -2px 2px 0 #262730;
+    font-size: xx-large;
+}   
+
+
+p {
+    line-height: 50px;
+    font-size: large;
+    font-stretch: expanded;
+    background-color: #262730;
+
+}
+
+strong {
+    color: #CB9CF2;
+    font-style: italic;
+}
+
+
+div.login{
+    padding: 30px;
+    color: #231D1A;
+    text-align: center;
+    font-size: xx-large;
+}
+
+div.usersofsite{
+    color: #231D1A;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+ul {
+    list-style-type: none;
+    box-sizing: border-box;
+
+}
+
+li.user {
+    
+    padding: 30px 0px 30px 0px;
+    display:table;
+    margin:0px auto 0px auto;
+    font-weight: bold;
+}
+
+
+div.bottone {
+    padding: 50px;
+    text-align: center;
+}
+
+
+

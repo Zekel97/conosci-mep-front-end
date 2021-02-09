@@ -1,2 +1,8 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    globals:
+        profile: "Andreas Szekely"
+        Menu0 : ['Homepage', '#']
+        Menu1 : ['Chi Siamo', '#']
+        Menu2 : ['Chi Sei', '#']
+        Menu3 : ['Sedute Spiritiche', '#']
