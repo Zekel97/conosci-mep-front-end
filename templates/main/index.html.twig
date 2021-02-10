@@ -4,6 +4,7 @@
 
 {% block stylesheets %}
     {{ encore_entry_link_tags('main') }}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 {% endblock %}
 
 {% block body %}
@@ -28,16 +29,22 @@
         e l'adattarmi è uno dei miei punti forti.
     </p>
 
-    <div class="js-user-rating" data-is-authenticated="{{ profile ? 'I solemny swear that I am up to no good' : 'Nox' }}"></div>
+    <div class="js-user-auth" data-is-authenticated="{{ profile ? 'I solemny swear that I am up to no good' : 'Nox' }}"></div>
 
     <div class="bottone"> 
-        <button id="ciao"> PRESS ME </button>
+
+        <button id ="spirits" type="button" class="btn btn-dark"> PRESS ME FOR SPIRITS IN CONSOLE </button>
+        </br>
+        </br>
+        <button id ="message" type="button" class="btn btn-dark"> PRESS ME FOR MESSAGE IN CONSOLE </button>
+
     </div>
 
     {% if profile != "" %}
     <div class="usersofsite">
 
         <h2>Ecco i {{users|length}} utenti registrati per le sedute spiritiche! </h2>
+
 
         <ul id="users" >
             {% for user in users %}

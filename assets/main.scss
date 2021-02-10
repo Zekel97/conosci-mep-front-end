@@ -43,7 +43,7 @@
 
 h1,p {
     padding: 400px;
-    color: whitesmoke;
+    color: whitesmoke !important;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;    
 }
@@ -98,7 +98,7 @@ li.user {
 
 
 div.bottone {
-    padding: 50px;
+    padding: 100px;
     text-align: center;
 }
 
